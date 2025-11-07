@@ -1,0 +1,22 @@
+{
+  "console log": {
+    "prefix": "clg",
+    "body": ["console.log(${1})"]
+  },
+  "console error": {
+    "prefix": "cle",
+    "body": ["console.error('[${1}]')"]
+  },
+  "async named function": {
+    "prefix": "fae",
+    "body": ["export async function ${1:function}() {", " ${2}", "};"]
+  },
+  "arrow function": {
+    "prefix": "cf",
+    "body": ["const ${1:name} = () => {", " ${2}", "};"]
+  },
+  "async anonymous function": {
+    "prefix": "fano",
+    "body": ["(async () => {", " ${1}", "} )();"]
+  }
+}

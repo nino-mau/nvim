@@ -1,0 +1,67 @@
+{
+  "Vue class array": {
+    "prefix": "v3classarr",
+    "body": [":class=\"['', ${1:variable}]\""],
+    "description": "class array binding"
+  },
+  "Vue css deep selector": {
+    "prefix": "v3deep",
+    "body": [":deep(.${1:className}) {", "", "}"],
+    "description": "deep css class selector"
+  },
+  "Vue class conditional": {
+    "prefix": "v3classcond",
+    "body": [":class=\"[", " '',", " {", " '': ${1:variable}", " },", "]"],
+    "description": "class conditional"
+  },
+  "Vue cn class": {
+    "prefix": "vcn",
+    "body": [":class=\"cn('${1}')\""],
+    "description": "class conditional"
+  },
+  "Vue TS define props": {
+    "prefix": "vprops",
+    "body": [
+      "interface Props {",
+      " ${1}: ${2};",
+      "};",
+      "",
+      "const props = defineProps<Props>();"
+    ],
+    "description": "define props statement for typescript"
+  },
+  "Vue TS define props with default": {
+    "prefix": "vpropsd",
+    "body": [
+      "interface Props {",
+      " ${1}: ${2};",
+      "}",
+      "",
+      "const props = withDefaults(defineProps<Props>(), {",
+      " props: content",
+      "});"
+    ],
+    "description": "define props statement for typescript with default"
+  },
+  "Vue svg component template": {
+    "prefix": "vsvg",
+    "body": [
+      "<template>",
+      "\t<div>",
+      "",
+      "\t</div>",
+      "</template>",
+      "",
+      "<script>",
+      "\texport default {",
+      "\t\t${0}",
+      "\t}",
+      "</script>",
+      "",
+      "<style lang=\"sass\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "define props statement for typescript with default"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "header comment": {
+    "prefix": "vfor",
+    "body": [
+      "${1:div}(v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\")",
+      "\t| {{ ${2:item} }}"
+    ],
+    "description": "vfor statement"
+  }
+}
