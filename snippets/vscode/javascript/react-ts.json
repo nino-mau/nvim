@@ -2,7 +2,7 @@
   "reactFunctionComponent": {
     "prefix": "rcmp",
     "body": [
-      "type ${TM_FILENAME_BASE}Props {",
+      "type ${TM_FILENAME_BASE}Props = {",
       "};",
       "",
       "export default function ${TM_FILENAME_BASE}(props: ${TM_FILENAME_BASE}Props) {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n"
