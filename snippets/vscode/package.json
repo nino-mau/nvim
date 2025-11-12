@@ -319,7 +319,7 @@
       },
       {
         "language": "typescriptreact",
-        "path": "./javascript/react-ts.json"
+        "path": "./javascript/react-ts.jsonc"
       },
       {
         "language": "typescriptreact",
