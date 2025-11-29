@@ -7,7 +7,7 @@ return {
     user = user:sub(1, 1):upper() .. user:sub(2)
     return {
       auto_insert_mode = true,
-      model = "gemini-3-pro-preview",
+      model = "gpt-5.1-codex",
       headers = {
         user = "  " .. user .. " ",
         assistant = "  Copilot ",
