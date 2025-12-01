@@ -7,23 +7,19 @@ return {
       ["<S-Tab>"] = { "select_prev", "accept", "fallback" },
       ["<CR>"] = { "accept", "fallback" },
     },
+    sources = {
+      providers = {
+        lsp = {
+          score_offset = 1000,
+        },
+        snippets = {
+          score_offset = 500,
+        },
+      },
+    },
     completion = {
       ghost_text = {
         enabled = false,
-      },
-      menu = {
-        scrollbar = false,
-        draw = {
-          components = {
-            kind_icon = {
-              ellipsis = false,
-              text = function(ctx)
-                local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
-                return kind_icon .. " "
-              end,
-            },
-          },
-        },
       },
     },
   },
