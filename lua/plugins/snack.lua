@@ -60,6 +60,7 @@ return {
         -- ".nuxt/dev",
         -- ".nuxt/dist",
         ".nuxt/ui",
+        ".next",
         -- ".nuxt/manifest",
         -- ".nuxt/schema",
         -- ".nuxt/*.json",
