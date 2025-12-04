@@ -54,5 +54,14 @@ return {
       mode = { "n", "x" },
       desc = "Sidekick Select Prompt",
     },
+    {
+      "<leader>ag",
+      function()
+        require("sidekick.cli").send({
+          msg = "Write a conventional commit message with emojis based on the staged in this repo. Follow the conventional commits format (feat:, fix:, docs:, etc.) and include relevant emojis at the start.",
+        })
+      end,
+      desc = "Git Commit Message (Staged)",
+    },
   },
 }
