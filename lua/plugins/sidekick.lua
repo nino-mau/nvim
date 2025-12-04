@@ -2,7 +2,17 @@ return {
   "folke/sidekick.nvim",
   opts = {
     nes = { enabled = false },
+    cli = {
+      tools = {
+        opencode = {
+          cmd = { "opencode", "--continue" },
+          -- HACK: https://github.com/sst/opencode/issues/445
+          env = { OPENCODE_THEME = "system" },
+        },
+      },
+    },
   },
+  require("sidekick").setup({}),
   -- stylua: ignore
   keys = {
     -- nes is also useful in normal mode
