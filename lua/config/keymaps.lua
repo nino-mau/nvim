@@ -71,7 +71,7 @@ map({ "i", "s" }, "<C-G>", function()
   ls.jump(-1)
 end, { silent = true })
 -- Expand lua snippet
-map({ "i", "s" }, "<C-e>", function()
+map({ "i", "s" }, "<C-j>", function()
   if ls.expandable() then
     ls.expand()
   end
