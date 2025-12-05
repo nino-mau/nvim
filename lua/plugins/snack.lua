@@ -61,6 +61,8 @@ return {
         -- ".nuxt/dist",
         ".nuxt/ui",
         ".next",
+        "dist",
+        "jimu-ui",
         -- ".nuxt/manifest",
         -- ".nuxt/schema",
         -- ".nuxt/*.json",
