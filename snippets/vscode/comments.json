@@ -3,6 +3,10 @@
     "prefix": "chead",
     "body": ["/**", "*", "* -- ${1:item} --", "*", "*/"]
   },
+  "hashtag comment": {
+    "prefix": "ctitle",
+    "body": ["###################", "### ${1:item} ###", "###################"]
+  },
   "jsdoc block comment": {
     "prefix": "csec",
     "body": ["/**", "* ${1:item}", "*/"]
