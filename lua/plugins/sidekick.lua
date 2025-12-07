@@ -67,9 +67,15 @@ return {
     {
       "<leader>ag",
       function()
-        require("sidekick.cli").send({
-          msg = "Write a conventional commit message with emojis based on the staged in this repo. Follow the conventional commits format (feat:, fix:, docs:, etc.) and include relevant emojis at the start.",
-        })
+        local prompt_path = vim.fn.stdpath("config") .. "/lua/plugins/assets/gitCommitPrompt.md"
+        local file = io.open(prompt_path, "r")
+        if file then
+          local content = file:read("*a")
+          file:close()
+          require("sidekick.cli").send({ msg = content })
+        else
+          vim.notify("Could not read git commit prompt file", vim.log.levels.ERROR)
+        end
       end,
       desc = "Git Commit Message (Staged)",
     },
