@@ -26,7 +26,7 @@ return {
     },
     {
       "<leader>aa",
-      function() require("sidekick.cli").toggle() end,
+      function() require("sidekick.cli").toggle({ name = "opencode"}) end,
       desc = "Sidekick Toggle CLI",
     },
     {
