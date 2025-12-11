@@ -18,5 +18,21 @@
   "async anonymous function": {
     "prefix": "fano",
     "body": ["(async () => {", " ${1}", "} )();"]
+  },
+  "fetch request": {
+    "prefix": "fetch",
+    "body": [
+      "const response = await fetch('${1:/api/example}', {",
+      "  method: '${2:GET}',",
+      "  headers: {",
+      "    'Content-Type': 'application/json'",
+      "  },",
+      "  body: ${3:JSON.stringify(${4:data})}",
+      "});",
+      "if (!response.ok) {",
+      "  throw new Error('Request failed');",
+      "}",
+      "const ${5:result} = await response.json();"
+    ]
   }
 }
