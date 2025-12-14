@@ -65,6 +65,36 @@ return {
         djls = {
           filetypes = { "htmldjango" },
         },
+        vtsls = {
+          -- Explicitly enable vtsls (LazyVim might default to tsserver/ts_ls otherwise)
+          enabled = true,
+          settings = {
+            vtsls = {
+              enableMoveToFileCodeAction = true,
+              experimental = {
+                completion = {
+                  enableServerSideFuzzyMatch = true,
+                },
+              },
+            },
+            typescript = {
+              check = {
+                -- Disable expensive checks
+                npmIsInstalled = false,
+              },
+              tsserver = {
+                -- CRITICAL: Increase memory limit to 8GB (8192MB)
+                maxTsServerMemory = 8192,
+                -- Disable plugins that slow down large repos
+                pluginPaths = {},
+              },
+              preferences = {
+                -- Reduce auto-import scanning cost
+                includePackageJsonAutoImports = "off",
+              },
+            },
+          },
+        },
       },
     },
   },
