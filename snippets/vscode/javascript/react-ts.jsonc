@@ -13,5 +13,31 @@
     "prefix": "sto",
     "body": ["set${1}((prev) => ({", "...prev,", "${2}: ${3}", "}));"],
     "description": "To set specific proprety of a state object"
+  },
+  "jsx conditional ternary": {
+    "prefix": "jsxter",
+    "body": [
+      "{ ${1:condition} ?",
+      "(",
+      " <div>",
+      "   <div></div>",
+      " </div>",
+      ") : (",
+      " <div>",
+      "   <div></div>",
+      " </div>",
+      ")}"
+    ]
+  },
+  "jsx conditional and": {
+    "prefix": "jsxand",
+    "body": [
+      "{ ${1:condition} &&",
+      "(",
+      " <div>",
+      "   <div></div>",
+      " </div>",
+      ")}"
+    ]
   }
 }
