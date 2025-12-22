@@ -21,10 +21,11 @@ return {
       })
 
       local function uuid()
-        local id, _ = vim.fn.system("uuidgen"):gsub("\n", "")
+        local id, _ = vim.fn.system("uuidgen -7"):gsub("\n", "")
         return id
       end
 
+      -- Custom uuid snippet
       ls.add_snippets("global", {
         s({
           trig = "uuid",
@@ -36,24 +37,10 @@ return {
           end),
         }),
       })
-
-      -- vim.keymap.set({ "i", "s" }, "<C-P>", function()
-      --   if ls.expand_or_locally_jumpable() then
-      --     ls.expand_or_jump()
-      --   end
-      -- end, { desc = "Expand or jump forward in lua-snippet", silent = true })
-      --
-      -- vim.keymap.set({ "i", "s" }, "<C-J>", function()
-      --   if ls.jumpable(-1) then
-      --     ls.jump(-1)
-      --   end
-      -- end, { desc = "Jump backward in lua-snippet", silent = true })
-
-      -- Load custom snippets
     end,
     opts = function()
       local ls = require("luasnip")
-      -- load VSCode-style snippets from friendly-snippets
+      -- load VSCode-style snippets
       require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets/vscode/" })
       return ls
     end,
