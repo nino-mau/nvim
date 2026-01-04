@@ -95,6 +95,12 @@ return {
             },
           },
         },
+        biome = {
+          enabled = true,
+        },
+        eslint = {
+          enabled = false,
+        },
       },
     },
   },

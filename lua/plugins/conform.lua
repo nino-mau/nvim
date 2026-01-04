@@ -2,10 +2,10 @@ return {
   "stevearc/conform.nvim",
   opts = {
     formatters_by_ft = {
-      jsonc = { "prettier" },
+      -- jsonc = { "prettier" },
       html = { "djlint" },
       htmldjango = { "djlint" },
-      json = { "prettier" },
+      -- json = { "prettier" },
       svg = { "prettier" },
       java = { "google_java_format" },
       sql = { "sql_formatter" },
@@ -20,6 +20,11 @@ return {
           "--single-quote",
           "true",
         },
+      },
+      biome = {
+        command = "biome",
+        args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
+        stdin = true,
       },
     },
   },

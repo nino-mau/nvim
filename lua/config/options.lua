@@ -4,7 +4,7 @@
 
 vim.g.lazyvim_mini_snippets_in_completion = true
 
-vim.g.lazyvim_eslint_auto_format = true
+vim.g.lazyvim_eslint_auto_format = false
 
 -- enable django template lsp
 vim.lsp.enable("djlsp")
