@@ -34,5 +34,9 @@
       "}",
       "const ${5:result} = await response.json();"
     ]
+  },
+  "exportType": {
+    "body": ["export type ${1:first} = {${2:second}}"],
+    "prefix": "exptp"
   }
 }
