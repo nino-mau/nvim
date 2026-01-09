@@ -20,3 +20,17 @@ vim.opt.showbreak = "↪ " -- Visual indicator for wrapped lines
 -- vim.opt.breakindent = true -- Keep wrapped lines visually indented
 -- vim.opt.textwidth = 80 -- Hard-wrap lines at 80 chars
 -- vim.opt.formatoptions:append("t") -- Enable auto-wrap when typing
+--
+
+-- Add linematch to neovim diff
+vim.opt.diffopt:append("linematch:60")
+vim.opt.diffopt = {
+  "internal",
+  "filler",
+  "closeoff",
+  "hiddenoff",
+  "vertical",
+  "indent-heuristic",
+  "linematch:60",
+  "algorithm:histogram",
+}
