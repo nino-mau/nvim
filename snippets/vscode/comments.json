@@ -1,26 +1,52 @@
 {
   "heading comment": {
     "prefix": "chead",
-    "body": ["/**", "*", "* -- ${1:item} --", "*", "*/"]
+    "body": [
+      "/**",
+      "*",
+      "* -- ${1:item} --",
+      "*",
+      "*/"
+    ]
   },
   "hashtag comment": {
     "prefix": "ctitle",
-    "body": ["###################", "### ${1:item} ###", "###################"]
+    "body": [
+      "###################",
+      "### ${1:item} ###",
+      "###################"
+    ]
   },
   "jsdoc block comment": {
-    "prefix": "csec",
-    "body": ["/**", "* ${1:item}", "*/"]
+    "prefix": "cbl",
+    "body": [
+      "/**",
+      "* ${1:item}",
+      "*/"
+    ]
   },
   "jsdoc block comment with todo-comments higlight": {
     "prefix": "ch",
-    "body": ["/**", "*   : ${1}", "*/"]
+    "body": [
+      "/**",
+      "*   : ${1}",
+      "*/"
+    ]
   },
   "jsdoc block comment with todo-comments higlight and function icon": {
     "prefix": "chfunc",
-    "body": ["/**", "*", "*  󰡱 : ${1}", "*", "*/"]
+    "body": [
+      "/**",
+      "*",
+      "*  󰡱 : ${1}",
+      "*",
+      "*/"
+    ]
   },
   "jsdoc line comment": {
     "prefix": "cline",
-    "body": ["/** ${1:item} */"]
+    "body": [
+      "/** ${1:item} */"
+    ]
   }
 }
