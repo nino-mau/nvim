@@ -9,6 +9,7 @@ return {
       svg = { "prettier" },
       java = { "google_java_format" },
       sql = { "sql_formatter" },
+      vue = { "biome_vue" },
     },
     formatters = {
       prettier = {
@@ -24,6 +25,11 @@ return {
       biome = {
         command = "biome",
         args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
+        stdin = true,
+      },
+      biome_vue = {
+        command = "biome",
+        args = { "format", "--stdin-file-path", "$FILENAME" },
         stdin = true,
       },
     },
