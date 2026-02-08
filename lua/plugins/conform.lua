@@ -9,7 +9,9 @@ return {
       svg = { "prettier" },
       java = { "google_java_format" },
       sql = { "sql_formatter" },
-      vue = { "biome_vue" },
+      vue = { "prettier" },
+      ["fish.chezmoitmpl"] = {},
+      ["chezmoitmpl"] = {},
     },
     formatters = {
       prettier = {
